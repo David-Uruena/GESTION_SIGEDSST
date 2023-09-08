@@ -1,0 +1,82 @@
+{% extends 'partials/body-login.html' %}
+{% load static %}
+
+{% block cuerpo %}
+<body class="login-page" style="min-height: 466px;">
+    <div class="login-box">
+
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="/static/img/logo.jpeg" alt="Logo SIGED" style="max-width: 80px;">
+                    </div>
+                    <div class="col-10">
+                        <a href="#" class="h1"><b>SIGED SST</b></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="login-box-msg">Bienvenido a SIGED SST</p>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Nombre de usuario" {{form.username}}>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" {{form.password}}>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">
+                                    Recordarme
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <input type="submit" class="btn btn-primary btn-block" value="Ingresar">
+                        </div>
+                    </div>
+                </form>
+                
+
+
+                <p class="mb-1">
+                    <a href="#">Olvidé mi contraseña</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+
+
+    <div style="position: static !important;">
+        <div data-lastpass-infield="true"
+            style="position: absolute !important; top: 0px !important; left: 0px !important;"></div>
+    </div>
+    {% include 'partials/js.html' %}
+</body>
+{% endblock cuerpo %}
+    
+

@@ -1,0 +1,153 @@
+{% load static %}
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="{% url 'inicio-admin' %}" class="brand-link">
+    <img src="{% static 'img/logo.jpeg' %}" alt="SIGED Logo" class="brand-image img-circle elevation-3"
+      style="opacity: .8">
+    <span class="brand-text font-weight-light">SIGED SST</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="{% static 'img/usuarios/sara.jpg' %}" class="img-circle elevation-2 h-75" alt="User Image">
+        {% comment %} <img src="{{MEDIA_URL}}{{image_user}}" class="img-circle elevation-2 h-75" alt="User Image"> {% endcomment %}
+      </div>
+      <div class="info text-white">
+        <Strong>Sara Tatis</Strong>
+        {% comment %} <Strong>{{usuario_actual.first_name}}</Strong> {% endcomment %}
+      </div>
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Buscar.." aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        
+        
+        <li class="nav-header">USUARIOS</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-user-circle"></i>
+            <p>
+              Usuarios
+              <i class="fas fa-angle-left right"></i>
+
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>Ver Usuarios</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-user-plus"></i>
+                <p>Crear Usuario</p>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-briefcase"></i>
+            <p>Empresas</p>
+          </a>
+        </li>
+        <li class="nav-header">FACTURACIÓN</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-file-invoice-dollar"></i>
+            <p>
+              Facturas
+
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-dolly"></i>
+            <p>
+              Devoluciones
+              <i class="fas fa-angle-left right"></i>
+
+            </p>
+          </a>
+        </li>
+        
+        <li class="nav-header">PRODUCTOS</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-boxes"></i>
+            <p>
+              Productos
+              <i class="fas fa-angle-left right"></i>
+
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-box-open"></i>
+                <p>Ver Productos</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-parachute-box"></i>
+                <p>Crear Producto</p>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="pages/mailbox/compose.html" class="nav-link">
+            <i class="nav-icon fas fa-code-branch"></i>
+            <p>Categorías</p>
+          </a>
+        </li>
+        <li class="nav-header">EXTRAS</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-map-signs"></i>
+            <p>Municipios</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-road"></i>
+            <p>Departamentos</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+  <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
